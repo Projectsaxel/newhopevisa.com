@@ -1,0 +1,43 @@
+# New Hope Immigration Services (Português (Brasil))
+
+> New Hope Immigration Services é uma organização sem fins lucrativos na Flórida (EUA) que oferece preparação de documentos e orientação em processos de imigração a baixo custo. Não somos escritório de advocacia. Telefone: +1 407 275-6163. Site em português brasileiro.
+
+## Páginas principais
+
+- [Início](https://newhopevisa.com/pt-br/): Página inicial do site em português.
+- [Serviços](https://newhopevisa.com/pt-br/servicos/): Visão geral dos serviços de imigração oferecidos.
+- [Taxas dos serviços](https://newhopevisa.com/pt-br/taxas-dos-servicos/): Tabela de taxas de serviço (não inclui taxas USCIS).
+- [Quem somos](https://newhopevisa.com/pt-br/quem-somos/): Missão, equipe e história da organização.
+- [Contato](https://newhopevisa.com/pt-br/contato/): Formulário e dados para falar com a equipe.
+
+## Serviços de imigração
+
+- [Visto de trabalho (EAD)](https://newhopevisa.com/pt-br/visto-de-trabalho/): Autorização de emprego e permisos de trabalho.
+- [Documentos de viagem](https://newhopevisa.com/pt-br/documentos-de-viagem/): Advance parole e documentação de viagem.
+- [Petição familiar](https://newhopevisa.com/pt-br/peticao-familiar/): Reunificação familiar e petições I-130.
+- [Ajuste de status](https://newhopevisa.com/pt-br/ajuste-de-status/): Green card dentro dos EUA (I-485).
+- [Processamento consular](https://newhopevisa.com/pt-br/processamento-consular/): Vistos de imigrante via consulado.
+- [Naturalização](https://newhopevisa.com/pt-br/naturalizacao/): Cidadania americana (Form N-400).
+- [Renovação de residência (I-90)](https://newhopevisa.com/pt-br/renovacao-de-residencia-i-90/): Renovação ou substituição de green card.
+- [Waivers](https://newhopevisa.com/pt-br/waivers/): Perdões de inadmissibilidade.
+- [VAWA](https://newhopevisa.com/pt-br/vawa/): Violência doméstica — petição VAWA.
+- [TPS](https://newhopevisa.com/pt-br/status-de-protecao-temporaria-tps/): Temporary Protected Status.
+
+## Políticas e termos legais
+
+- [Política de privacidade](https://newhopevisa.com/pt-br/politica-de-privacidade/): Coleta e uso de dados pessoais.
+- [Termos de uso](https://newhopevisa.com/pt-br/termos-de-uso/): Regras de uso do site e dos serviços.
+- [Política de cookies](https://newhopevisa.com/pt-br/politica-de-cookies/): Uso de cookies e tecnologias de rastreamento.
+
+## Outros idiomas
+
+- [English](https://newhopevisa.com/en/llms.txt): Versão em inglês do site.
+- [Español](https://newhopevisa.com/es/llms.txt): Versão em espanhol do site.
+- [Seletor de idioma / Language hub](https://newhopevisa.com/): Choose PT, EN, or ES.
+
+## Metadados
+
+- Canonical base URL: https://newhopevisa.com/pt-br/
+- Sitemap: https://newhopevisa.com/sitemap-index.xml
+- robots.txt: https://newhopevisa.com/robots.txt
+- llms.txt (this file): https://newhopevisa.com/pt-br/llms.txt

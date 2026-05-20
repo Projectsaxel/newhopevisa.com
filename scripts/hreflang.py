@@ -29,62 +29,72 @@ PAGES: dict[str, dict[str, str]] = {
 	"servicos": {
 		"pt-br": "pt-br/servicos/",
 		"en": "en/services/",
-		"es": "es/services/",
+		"es": "es/servicios/",
 	},
 	"taxas": {
 		"pt-br": "pt-br/taxas-dos-servicos/",
 		"en": "en/fee-schedule/",
-		"es": "es/fee-schedule/",
+		"es": "es/tarifas-de-servicios/",
 	},
 	"quem-somos": {
 		"pt-br": "pt-br/quem-somos/",
 		"en": "en/about-us/",
-		"es": "es/about-us/",
+		"es": "es/quienes-somos/",
 	},
 	"contato": {
 		"pt-br": "pt-br/contato/",
 		"en": "en/contact-us/",
-		"es": "es/contact-us/",
+		"es": "es/contacto/",
 	},
 	"privacidade": {
 		"pt-br": "pt-br/politica-de-privacidade/",
 		"en": "en/privacy-policy/",
-		"es": "es/privacy-policy/",
+		"es": "es/politica-de-privacidad/",
+	},
+	"termos": {
+		"pt-br": "pt-br/termos-de-uso/",
+		"en": "en/terms-of-use/",
+		"es": "es/terminos-de-uso/",
+	},
+	"cookies": {
+		"pt-br": "pt-br/politica-de-cookies/",
+		"en": "en/cookie-policy/",
+		"es": "es/politica-de-cookies/",
 	},
 	"visto-trabalho": {
 		"pt-br": "pt-br/visto-de-trabalho/",
 		"en": "en/work-permit/",
-		"es": "es/work-permit/",
+		"es": "es/permiso-de-trabajo/",
 	},
 	"documentos-viagem": {
 		"pt-br": "pt-br/documentos-de-viagem/",
 		"en": "en/travel-documents/",
-		"es": "es/travel-documents/",
+		"es": "es/documentos-de-viaje/",
 	},
 	"peticao-familiar": {
 		"pt-br": "pt-br/peticao-familiar/",
 		"en": "en/family-petitions/",
-		"es": "es/family-petitions/",
+		"es": "es/peticion-familiar/",
 	},
 	"ajuste-status": {
 		"pt-br": "pt-br/ajuste-de-status/",
 		"en": "en/adjustment-of-status/",
-		"es": "es/adjustment-of-status/",
+		"es": "es/ajuste-de-estatus/",
 	},
 	"processamento-consular": {
 		"pt-br": "pt-br/processamento-consular/",
 		"en": "en/consular-processing/",
-		"es": "es/consular-processing/",
+		"es": "es/procesamiento-consular/",
 	},
 	"naturalizacao": {
 		"pt-br": "pt-br/naturalizacao/",
 		"en": "en/naturalization/",
-		"es": "es/naturalization/",
+		"es": "es/naturalizacion/",
 	},
 	"renovacao-i90": {
 		"pt-br": "pt-br/renovacao-de-residencia-i-90/",
 		"en": "en/residence-renewals-i-90/",
-		"es": "es/residence-renewals-i-90/",
+		"es": "es/renovacion-de-residencia-i-90/",
 	},
 	"waivers": {
 		"pt-br": "pt-br/waivers/",
@@ -99,7 +109,7 @@ PAGES: dict[str, dict[str, str]] = {
 	"tps": {
 		"pt-br": "pt-br/status-de-protecao-temporaria-tps/",
 		"en": "en/temporary-protected-status-tps/",
-		"es": "es/temporary-protected-status-tps/",
+		"es": "es/estatus-de-proteccion-temporal-tps/",
 	},
 }
 
@@ -116,6 +126,11 @@ SLUG_TO_KEY = {
 	"contact-us": "contato",
 	"politica-de-privacidade": "privacidade",
 	"privacy-policy": "privacidade",
+	"termos-de-uso": "termos",
+	"terms-of-use": "termos",
+	"terminos-de-uso": "termos",
+	"politica-de-cookies": "cookies",
+	"cookie-policy": "cookies",
 	"visto-de-trabalho": "visto-trabalho",
 	"work-permit": "visto-trabalho",
 	"documentos-de-viagem": "documentos-viagem",
@@ -134,6 +149,19 @@ SLUG_TO_KEY = {
 	"vawa": "vawa",
 	"status-de-protecao-temporaria-tps": "tps",
 	"temporary-protected-status-tps": "tps",
+	"servicios": "servicos",
+	"tarifas-de-servicios": "taxas",
+	"quienes-somos": "quem-somos",
+	"contacto": "contato",
+	"politica-de-privacidad": "privacidade",
+	"permiso-de-trabajo": "visto-trabalho",
+	"documentos-de-viaje": "documentos-viagem",
+	"peticion-familiar": "peticao-familiar",
+	"ajuste-de-estatus": "ajuste-status",
+	"procesamiento-consular": "processamento-consular",
+	"naturalizacion": "naturalizacao",
+	"renovacion-de-residencia-i-90": "renovacao-i90",
+	"estatus-de-proteccion-temporal-tps": "tps",
 }
 
 HREFLANG_CODES = {

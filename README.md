@@ -37,3 +37,4 @@ python3 scripts/deploy-ftp.py
 | `scripts/urls-sem-html.py` | Remove `.html` dos links internos |
 | `scripts/corrigir-seo-lang.py` | Corrige `lang` e `og:locale` em en/es |
 | `scripts/traduzir-es.py` | Traduz conteúdo e metas das páginas `/es/` |
+| `scripts/gerar-sitemap.py` | Gera `robots.txt` e sitemaps XML (com hreflang) |

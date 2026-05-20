@@ -7,3 +7,19 @@ RewriteCond %{QUERY_STRING} ^ver=([^&]+)$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)\.(css|js|woff2?|ttf|eot)$ $1﹖ver=%1.$2? [L]
 </IfModule>
+# Redirecionamentos 301 — slugs ES antigos (inglês) -> espanhol
+<IfModule mod_rewrite.c>
+RewriteRule ^es/about-us/?$ /es/quienes-somos/ [R=301,L]
+RewriteRule ^es/adjustment-of-status/?$ /es/ajuste-de-estatus/ [R=301,L]
+RewriteRule ^es/consular-processing/?$ /es/procesamiento-consular/ [R=301,L]
+RewriteRule ^es/contact-us/?$ /es/contacto/ [R=301,L]
+RewriteRule ^es/family-petitions/?$ /es/peticion-familiar/ [R=301,L]
+RewriteRule ^es/fee-schedule/?$ /es/tarifas-de-servicios/ [R=301,L]
+RewriteRule ^es/naturalization/?$ /es/naturalizacion/ [R=301,L]
+RewriteRule ^es/privacy-policy/?$ /es/politica-de-privacidad/ [R=301,L]
+RewriteRule ^es/residence-renewals-i-90/?$ /es/renovacion-de-residencia-i-90/ [R=301,L]
+RewriteRule ^es/services/?$ /es/servicios/ [R=301,L]
+RewriteRule ^es/temporary-protected-status-tps/?$ /es/estatus-de-proteccion-temporal-tps/ [R=301,L]
+RewriteRule ^es/travel-documents/?$ /es/documentos-de-viaje/ [R=301,L]
+RewriteRule ^es/work-permit/?$ /es/permiso-de-trabajo/ [R=301,L]
+</IfModule>

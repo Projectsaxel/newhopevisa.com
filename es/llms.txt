@@ -1,0 +1,43 @@
+# New Hope Immigration Services (Español)
+
+> New Hope Immigration Services es una organización sin fines de lucro en Florida (EE. UU.) que ofrece preparación de documentos y orientación en procesos de inmigración a bajo costo. No somos un bufete de abogados. Teléfono: +1 407 275-6163. Sitio en español.
+
+## Páginas principales
+
+- [Inicio](https://newhopevisa.com/es/): Página principal del sitio en español.
+- [Servicios](https://newhopevisa.com/es/servicios/): Resumen de los servicios de inmigración.
+- [Tarifas](https://newhopevisa.com/es/tarifas-de-servicios/): Tabla de tarifas de servicio (no incluye tasas del USCIS).
+- [Quiénes somos](https://newhopevisa.com/es/quienes-somos/): Misión, equipo e historia de la organización.
+- [Contacto](https://newhopevisa.com/es/contacto/): Formulario y datos de contacto.
+
+## Servicios de inmigración
+
+- [Permiso de trabajo (EAD)](https://newhopevisa.com/es/permiso-de-trabajo/): Autorización de empleo.
+- [Documentos de viaje](https://newhopevisa.com/es/documentos-de-viaje/): Advance parole y autorización de viaje.
+- [Peticiones familiares](https://newhopevisa.com/es/peticion-familiar/): Reunificación familiar e I-130.
+- [Ajuste de estatus](https://newhopevisa.com/es/ajuste-de-estatus/): Green card dentro de EE. UU. (I-485).
+- [Procesamiento consular](https://newhopevisa.com/es/procesamiento-consular/): Visas de inmigrante en consulado.
+- [Naturalización](https://newhopevisa.com/es/naturalizacion/): Ciudadanía estadounidense (Form N-400).
+- [Renovación de residencia (I-90)](https://newhopevisa.com/es/renovacion-de-residencia-i-90/): Renovación o reemplazo de green card.
+- [Waivers](https://newhopevisa.com/es/waivers/): Perdones de inadmisibilidad.
+- [VAWA](https://newhopevisa.com/es/vawa/): Violencia doméstica — petición VAWA.
+- [TPS](https://newhopevisa.com/es/estatus-de-proteccion-temporal-tps/): Temporary Protected Status.
+
+## Políticas y términos legales
+
+- [Política de privacidad](https://newhopevisa.com/es/politica-de-privacidad/): Recopilación y uso de datos personales.
+- [Términos de uso](https://newhopevisa.com/es/terminos-de-uso/): Reglas de uso del sitio y los servicios.
+- [Política de cookies](https://newhopevisa.com/es/politica-de-cookies/): Cookies y tecnologías de seguimiento.
+
+## Otros idiomas
+
+- [Português (Brasil)](https://newhopevisa.com/pt-br/llms.txt): Versión del sitio en portugués brasileño.
+- [English](https://newhopevisa.com/en/llms.txt): Versión del sitio en inglés.
+- [Seletor de idioma / Language hub](https://newhopevisa.com/): Choose PT, EN, or ES.
+
+## Metadatos
+
+- Canonical base URL: https://newhopevisa.com/es/
+- Sitemap: https://newhopevisa.com/sitemap-index.xml
+- robots.txt: https://newhopevisa.com/robots.txt
+- llms.txt (this file): https://newhopevisa.com/es/llms.txt

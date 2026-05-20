@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://newhopevisa.com/sitemap-landing.xml</loc>
+    <lastmod>2026-05-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://newhopevisa.com/sitemap-pt-br.xml</loc>
+    <lastmod>2026-05-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://newhopevisa.com/sitemap-en.xml</loc>
+    <lastmod>2026-05-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://newhopevisa.com/sitemap-es.xml</loc>
+    <lastmod>2026-05-20</lastmod>
+  </sitemap>
+</sitemapindex>

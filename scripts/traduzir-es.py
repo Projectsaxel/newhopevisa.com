@@ -157,7 +157,7 @@ def ensure_privacy_page() -> None:
 		return
 	dst.parent.mkdir(parents=True, exist_ok=True)
 	shutil.copy2(src, dst)
-	print("Criado es/privacy-policy/index.html a partir de en/")
+	print("Criado es/politica-de-privacidad/index.html a partir de en/")
 
 
 def main() -> None:

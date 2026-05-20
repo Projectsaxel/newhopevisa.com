@@ -1,0 +1,43 @@
+# New Hope Immigration Services (English)
+
+> New Hope Immigration Services is a nonprofit organization in Florida (USA) providing low-cost immigration document preparation and guidance. We are not a law firm. Phone: +1 407 275-6163. English-language site.
+
+## Main pages
+
+- [Home](https://newhopevisa.com/en/): English homepage.
+- [Services](https://newhopevisa.com/en/services/): Overview of immigration services offered.
+- [Fee schedule](https://newhopevisa.com/en/fee-schedule/): Service fees (USCIS filing fees not included).
+- [About us](https://newhopevisa.com/en/about-us/): Mission, team, and organization background.
+- [Contact us](https://newhopevisa.com/en/contact-us/): Contact form and ways to reach the team.
+
+## Immigration services
+
+- [Work permit (EAD)](https://newhopevisa.com/en/work-permit/): Employment authorization documents.
+- [Travel documents](https://newhopevisa.com/en/travel-documents/): Advance parole and travel authorization.
+- [Family petitions](https://newhopevisa.com/en/family-petitions/): Family reunification and I-130 petitions.
+- [Adjustment of status](https://newhopevisa.com/en/adjustment-of-status/): Green card while in the U.S. (I-485).
+- [Consular processing](https://newhopevisa.com/en/consular-processing/): Immigrant visas through U.S. consulates.
+- [Naturalization](https://newhopevisa.com/en/naturalization/): U.S. citizenship (Form N-400).
+- [Residence renewal (I-90)](https://newhopevisa.com/en/residence-renewals-i-90/): Green card renewal or replacement.
+- [Waivers](https://newhopevisa.com/en/waivers/): Inadmissibility waivers.
+- [VAWA](https://newhopevisa.com/en/vawa/): Domestic violence — VAWA self-petition.
+- [TPS](https://newhopevisa.com/en/temporary-protected-status-tps/): Temporary Protected Status.
+
+## Legal policies and terms
+
+- [Privacy policy](https://newhopevisa.com/en/privacy-policy/): How personal data is collected and used.
+- [Terms of use](https://newhopevisa.com/en/terms-of-use/): Website and service usage rules.
+- [Cookie policy](https://newhopevisa.com/en/cookie-policy/): Cookies and tracking technologies.
+
+## Other languages
+
+- [Português (Brasil)](https://newhopevisa.com/pt-br/llms.txt): Brazilian Portuguese version of the site.
+- [Español](https://newhopevisa.com/es/llms.txt): Spanish version of the site.
+- [Seletor de idioma / Language hub](https://newhopevisa.com/): Choose PT, EN, or ES.
+
+## Metadata
+
+- Canonical base URL: https://newhopevisa.com/en/
+- Sitemap: https://newhopevisa.com/sitemap-index.xml
+- robots.txt: https://newhopevisa.com/robots.txt
+- llms.txt (this file): https://newhopevisa.com/en/llms.txt

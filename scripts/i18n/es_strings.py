@@ -35,15 +35,15 @@ ES_REPLACEMENTS: dict[str, str] = {
 	"Explore our comprehensive range of exceptional services and unwavering commitment to excellence": (
 		"Explora nuestra amplia gama de servicios excepcionales y nuestro compromiso inquebrantable con la excelencia"
 	),
-	"<a href=\"../family-petitions/\">Family Petitions\n</a>": "<a href=\"../family-petitions/\">Peticiones Familiares\n</a>",
-	"<a href=\"../family-petitions/\">Family Petitions</a>": "<a href=\"../family-petitions/\">Peticiones Familiares</a>",
-	"<a href=\"../adjustment-of-status/\">Adjustment of Status</a>": "<a href=\"../adjustment-of-status/\">Ajuste de Estatus</a>",
-	"<a href=\"../consular-processing/\">Consular Processing </a>": "<a href=\"../consular-processing/\">Procesamiento Consular </a>",
-	"<a href=\"../naturalization/\">Naturalization </a>": "<a href=\"../naturalization/\">Naturalización </a>",
-	"<a href=\"../residence-renewals-i-90/\">Residence Renewals (I-90) </a>": "<a href=\"../residence-renewals-i-90/\">Renovación de Residencia (I-90) </a>",
-	"<a href=\"../travel-documents/\">Travel Documents</a>": "<a href=\"../travel-documents/\">Documentos de Viaje</a>",
-	"<a href=\"../temporary-protected-status-tps/\">Temporary Protected Status (TPS) </a>": "<a href=\"../temporary-protected-status-tps/\">Estatus de Protección Temporal (TPS) </a>",
-	"<a href=\"../work-permit/\">Work Permit</a>": "<a href=\"../work-permit/\">Permiso de Trabajo</a>",
+	"<a href=\"../peticion-familiar/\">Family Petitions\n</a>": "<a href=\"../peticion-familiar/\">Peticiones Familiares\n</a>",
+	"<a href=\"../peticion-familiar/\">Family Petitions</a>": "<a href=\"../peticion-familiar/\">Peticiones Familiares</a>",
+	"<a href=\"../ajuste-de-estatus/\">Adjustment of Status</a>": "<a href=\"../ajuste-de-estatus/\">Ajuste de Estatus</a>",
+	"<a href=\"../procesamiento-consular/\">Consular Processing </a>": "<a href=\"../procesamiento-consular/\">Procesamiento Consular </a>",
+	"<a href=\"../naturalizacion/\">Naturalization </a>": "<a href=\"../naturalizacion/\">Naturalización </a>",
+	"<a href=\"../renovacion-de-residencia-i-90/\">Residence Renewals (I-90) </a>": "<a href=\"../renovacion-de-residencia-i-90/\">Renovación de Residencia (I-90) </a>",
+	"<a href=\"../documentos-de-viaje/\">Travel Documents</a>": "<a href=\"../documentos-de-viaje/\">Documentos de Viaje</a>",
+	"<a href=\"../estatus-de-proteccion-temporal-tps/\">Temporary Protected Status (TPS) </a>": "<a href=\"../estatus-de-proteccion-temporal-tps/\">Estatus de Protección Temporal (TPS) </a>",
+	"<a href=\"../permiso-de-trabajo/\">Work Permit</a>": "<a href=\"../permiso-de-trabajo/\">Permiso de Trabajo</a>",
 	"Personalized support to reunite families and secure lawful U.S. residency": (
 		"Apoyo personalizado para reunir familias y asegurar la residencia legal en EE. UU."
 	),
@@ -79,6 +79,19 @@ ES_REPLACEMENTS: dict[str, str] = {
 	"In a rapidly evolving world, the only constant is change especially in the complex and ever-shifting landscape of immigration law and policy. It's no longer enough to simply keep pace, we must be ready to adapt quickly and proactively. Our team stays closely connected to every new update, regulation, and legal development, continuously refining our knowledge to ensure that we provide guidance that is accurate, current, and truly aligned with your needs.": (
 		"En un mundo que evoluciona rápidamente, el único constante es el cambio, especialmente en el panorama complejo de las leyes y políticas de inmigración. Ya no basta con seguir el ritmo: debemos adaptarnos con rapidez y de forma proactiva. Nuestro equipo se mantiene al día con cada actualización, regulación y desarrollo legal para ofrecer orientación precisa, actual y alineada con tus necesidades."
 	),
+	"In a rapidly evolving world, the only constant is change especially in the complex and ever-shifting landscape of immigration law and policy. It\u2019s no longer enough to simply keep pace, we must be ready to adapt quickly and proactively. Our team stays closely connected to every new update, regulation, and legal development, continuously refining our knowledge to ensure that we provide guidance that is accurate, current, and truly aligned with your needs.": (
+		"En un mundo que evoluciona rápidamente, el único constante es el cambio, especialmente en el panorama complejo de las leyes y políticas de inmigración. Ya no basta con seguir el ritmo: debemos adaptarnos con rapidez y de forma proactiva. Nuestro equipo se mantiene al día con cada actualización, regulación y desarrollo legal para ofrecer orientación precisa, actual y alineada con tus necesidades."
+	),
+	"Name							</label>": "Nombre							</label>",
+	"Surname							</label>": "Apellido							</label>",
+	"Email							</label>": "Correo electrónico							</label>",
+	"Message							</label>": "Mensaje							</label>",
+	'placeholder="Email"': 'placeholder="Correo electrónico"',
+	'aria-label="Contact"': 'aria-label="Contacto"',
+	'name="Contact"': 'name="Contacto"',
+	'&quot;step_next_label&quot;:&quot;Next&quot;': '&quot;step_next_label&quot;:&quot;Siguiente&quot;',
+	'&quot;step_previous_label&quot;:&quot;Previous&quot;': '&quot;step_previous_label&quot;:&quot;Anterior&quot;',
+	'"inLanguage":"en"': '"inLanguage":"es"',
 	"<h5 class=\"elementor-heading-title elementor-size-default\">Exploring Strategies</h5>": "<h5 class=\"elementor-heading-title elementor-size-default\">Explorando Estrategias</h5>",
 	"Join us on this insightful journey as we uncover the tactics that drive progress.": (
 		"Acompáñanos en este viaje para descubrir las tácticas que impulsan el progreso."
@@ -146,6 +159,80 @@ ES_REPLACEMENTS: dict[str, str] = {
 	"<h2 class=\"elementor-heading-title elementor-size-default\">Trusted Immigration Services</h2>": "<h2 class=\"elementor-heading-title elementor-size-default\">Servicios Migratorios de Confianza</h2>",
 	"<h2 class=\"elementor-heading-title elementor-size-default\">Most Common Services</h2>": "<h2 class=\"elementor-heading-title elementor-size-default\">Servicios Más Comunes</h2>",
 	"<h5 class=\"elementor-heading-title elementor-size-default\">PREDICTIONS AND PROJECTIONS</h5>": "<h5 class=\"elementor-heading-title elementor-size-default\">PROYECCIONES Y TENDENCIAS</h5>",
+	"<h2 class=\"elementor-heading-title elementor-size-default\">PREDICTIONS AND PROJECTIONS</h2>": "<h2 class=\"elementor-heading-title elementor-size-default\">PROYECCIONES Y TENDENCIAS</h2>",
+	"<h5 class=\"elementor-heading-title elementor-size-default\"> Servicio en Cada Detalle</h5>": "<h5 class=\"elementor-heading-title elementor-size-default\">Servicio en Cada Detalle</h5>",
+	"if you have a US Citizen relative, you may be eligible for family petition. Check your eligibility": (
+		"Si tiene un familiar ciudadano estadounidense, puede ser elegible para una petición familiar. Verifique su elegibilidad."
+	),
+	"becoming a legal permanent resident? Adjustment of Status is the process that allows eligible individuals already in the United States to apply for lawful permanent residence without needing to return to their home country. Our team guides you through every step from document preparation to final approval, ensuring a smooth and worry-free path to obtaining your Green Card": (
+		"¿Quiere convertirse en residente permanente legal? El ajuste de estatus permite que personas elegibles que ya están en EE. UU. soliciten la residencia permanente sin regresar a su país de origen. Nuestro equipo le guía en cada paso, desde la preparación de documentos hasta la aprobación final, para obtener su green card con tranquilidad."
+	),
+	"guidance through the U.S. citizenship application process, including documentation and eligibility requirements": (
+		"Orientación durante todo el proceso de solicitud de ciudadanía estadounidense, incluyendo documentación y requisitos de elegibilidad."
+	),
+	"completing and tracking the renewal of your Permanent Resident Card": (
+		"Completar y dar seguimiento a la renovación de su tarjeta de residente permanente."
+	),
+	"Our team of visa experts provides clear, reliable, and step-by-step guidance for every type of visa process. From student and religious visas to family-based or work-related applications, we ensure that all forms and requirements are completed accurately and on time.": (
+		"Nuestro equipo de expertos en visas ofrece orientación clara, confiable y paso a paso para todo tipo de proceso. Desde visas de estudiante y religiosas hasta solicitudes familiares o laborales, nos aseguramos de que formularios y requisitos se completen con precisión y a tiempo."
+	),
+	"We help you understand each visa category, we organize your documents, and prepare your case with confidence. With our experience and dedication, you can trust that your application is handled with care and attention to every detail.": (
+		"Le ayudamos a entender cada categoría de visa, organizamos sus documentos y preparamos su caso con confianza. Con nuestra experiencia y dedicación, puede confiar en que su solicitud se gestiona con cuidado y atención a cada detalle."
+	),
+	"<h4 class=\"elementor-heading-title elementor-size-default\">Cost-Effective</h4>": "<h4 class=\"elementor-heading-title elementor-size-default\">Relación calidad-precio</h4>",
+	"<h4 class=\"elementor-heading-title elementor-size-default\">Flexible Scheduling</h4>": "<h4 class=\"elementor-heading-title elementor-size-default\">Horarios flexibles</h4>",
+	"<h2 class=\"elementor-heading-title elementor-size-default\">Tailored Solutions</h2>": "<h2 class=\"elementor-heading-title elementor-size-default\">Soluciones a su medida</h2>",
+	"Every immigration journey is unique — that's why we offer tailored solutions designed around your specific goals. Whether you need help with family petitions, visa changes, or document preparation, our team creates a personalized plan that fits your needs.": (
+		"Cada trayectoria migratoria es única; por eso ofrecemos soluciones diseñadas según sus objetivos. Ya sea peticiones familiares, cambios de visa o preparación de documentos, creamos un plan personalizado para usted."
+	),
+	"Every immigration journey is unique — that’s why we offer tailored solutions designed around your specific goals. Whether you need help with family petitions, visa changes, or document preparation, our team creates a personalized plan that fits your needs.": (
+		"Cada trayectoria migratoria es única; por eso ofrecemos soluciones diseñadas según sus objetivos. Ya sea peticiones familiares, cambios de visa o preparación de documentos, creamos un plan personalizado para usted."
+	),
+	"We take the time to understand your situation and provide the right guidance for each step. With customized support and clear communication, we help you move forward confidently toward your life and career in the United States.": (
+		"Dedicamos tiempo a entender su situación y ofrecer la orientación adecuada en cada paso. Con apoyo personalizado y comunicación clara, le ayudamos a avanzar con confianza hacia su vida y carrera en Estados Unidos."
+	),
+	"<h5 class=\"elementor-heading-title elementor-size-default\">Popular services</h5>": "<h5 class=\"elementor-heading-title elementor-size-default\">Servicios populares</h5>",
+	"Receive personalized immigration guidance to understand your options, and plan your next steps confidently": (
+		"Reciba orientación migratoria personalizada para entender sus opciones y planificar sus próximos pasos con confianza"
+	),
+	"Get professional assistance to extend your visitor visa stay in the U.S., ensuring your forms are accurate and submitted on time": (
+		"Obtenga asistencia profesional para extender su estancia con visa de visitante en EE. UU., con formularios correctos y a tiempo"
+	),
+	"Smoothly transition from visitor to student or dependent status with step-by-step support and complete document prep": (
+		"Haga la transición de visitante a estudiante o dependiente con apoyo paso a paso y documentación completa"
+	),
+	"<h5 class=\"elementor-heading-title elementor-size-default\">Our Clients</h5>": "<h5 class=\"elementor-heading-title elementor-size-default\">Nuestros clientes</h5>",
+	"<h4 class=\"elementor-heading-title elementor-size-default\">Students</h4>": "<h4 class=\"elementor-heading-title elementor-size-default\">Estudiantes</h4>",
+	"Who need help applying for or changing to F1/F2 visas": (
+		"Que necesitan ayuda para solicitar o cambiar a visas F1/F2"
+	),
+	"<h4 class=\"elementor-heading-title elementor-size-default\">New immigrants</h4>": "<h4 class=\"elementor-heading-title elementor-size-default\">Nuevos inmigrantes</h4>",
+	"Who recently arrived and need help understanding U.S. immigration system": (
+		"Que llegaron recientemente y necesitan ayuda para entender el sistema de inmigración de EE. UU."
+	),
+	"<h4 class=\"elementor-heading-title elementor-size-default\">Citizenship applicants</h4>": "<h4 class=\"elementor-heading-title elementor-size-default\">Solicitantes de ciudadanía</h4>",
+	"Preparing for the naturalization process": "Preparándose para el proceso de naturalización",
+	"<h4 class=\"elementor-heading-title elementor-size-default\">Families</h4>": "<h4 class=\"elementor-heading-title elementor-size-default\">Familias</h4>",
+	"Looking to reunite with loved ones through family petition": (
+		"Que desean reunirse con sus seres queridos mediante una petición familiar"
+	),
+	"Empowering your dreams, one step at a time. Experience excellence with us, where innovation meets customer satisfaction with custom solutions for you.": (
+		"Impulsando sus sueños, paso a paso. Experimente la excelencia con nosotros, donde la innovación se une a la satisfacción del cliente con soluciones personalizadas."
+	),
+	"<span class=\"elementor-button-text\">Taxa</span>": "<span class=\"elementor-button-text\">Tarifa</span>",
+	"<span class=\"elementor-button-text\">Saber Más</span>": "<span class=\"elementor-button-text\">Saber más</span>",
+	"<span class=\"elementor-button-text\">Comenzar Ahora</span>": "<span class=\"elementor-button-text\">Comenzar ahora</span>",
+	# Elementor (strings PT no JS → ES)
+	'"a11yCarouselPrevSlideMessage":"Slide anterior"': '"a11yCarouselPrevSlideMessage":"Diapositiva anterior"',
+	'"a11yCarouselNextSlideMessage":"Pr\\u00f3ximo slide"': '"a11yCarouselNextSlideMessage":"Siguiente diapositiva"',
+	'"a11yCarouselFirstSlideMessage":"Este \\u00e9 o primeiro slide"': '"a11yCarouselFirstSlideMessage":"Esta es la primera diapositiva"',
+	'"a11yCarouselLastSlideMessage":"Este \\u00e9 o \\u00faltimo slide"': '"a11yCarouselLastSlideMessage":"Esta es la última diapositiva"',
+	'"a11yCarouselPaginationBulletMessage":"Ir para o slide"': '"a11yCarouselPaginationBulletMessage":"Ir a la diapositiva"',
+	'"label":"Dispositivos m\\u00f3veis no modo retrato"': '"label":"Móviles en modo vertical"',
+	'"label":"Dispositivos m\\u00f3veis no modo paisagem"': '"label":"Móviles en modo horizontal"',
+	'"label":"Tablet no modo retrato"': '"label":"Tablet en modo vertical"',
+	'"label":"Tablet no modo paisagem"': '"label":"Tablet en modo horizontal"',
+	'"label":"Dispositivos m\\u00f3veis"': '"label":"Dispositivos móviles"',
 	"<h2 class=\"elementor-heading-title elementor-size-default\">Visa Experts</h2>": "<h2 class=\"elementor-heading-title elementor-size-default\">Expertos en Visas</h2>",
 	"<h2 class=\"elementor-heading-title elementor-size-default\">Global Horizons</h2>": "<h2 class=\"elementor-heading-title elementor-size-default\">Horizontes Globales</h2>",
 	"<h2 class=\"elementor-heading-title elementor-size-default\">People We Support</h2>": "<h2 class=\"elementor-heading-title elementor-size-default\">Personas a las que Apoyamos</h2>",

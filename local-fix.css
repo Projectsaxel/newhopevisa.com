@@ -1,0 +1,6 @@
+/* Espelho estático: Elementor deixa .elementor-invisible oculto até o JS rodar. */
+.elementor-invisible {
+	visibility: visible !important;
+	opacity: 1 !important;
+	animation: none !important;
+}

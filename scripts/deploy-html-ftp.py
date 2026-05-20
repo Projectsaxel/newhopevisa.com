@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Envia apenas arquivos .html (rápido após correções pontuais)."""
+"""Envia arquivos .html (e .htaccess) para o FTP."""
 
 from __future__ import annotations
 
+import argparse
 import ftplib
+import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+DEPLOY_SUFFIXES = {".html", ".htaccess"}
 
 
 def ensure_remote_dir(ftp: ftplib.FTP, remote_dir: str) -> None:
@@ -32,12 +35,56 @@ def load_env(path: Path) -> dict[str, str]:
 	return data
 
 
-def main() -> None:
-	env_path = ROOT / ".env"
-	if not env_path.is_file():
-		print("Arquivo .env não encontrado.", file=sys.stderr)
-		sys.exit(1)
-	cfg = load_env(env_path)
+def git_changed_paths(since: str | None = None) -> list[Path]:
+	"""Arquivos alterados (working tree + staged) ou desde um ref git."""
+	seen: set[str] = set()
+	commands: list[list[str]] = [
+		["git", "diff", "--name-only"],
+		["git", "diff", "--cached", "--name-only"],
+	]
+	if since:
+		commands = [["git", "diff", "--name-only", since]]
+
+	for cmd in commands:
+		result = subprocess.run(
+			cmd,
+			cwd=ROOT,
+			capture_output=True,
+			text=True,
+			check=False,
+		)
+		if result.returncode != 0:
+			print(result.stderr or result.stdout, file=sys.stderr)
+			sys.exit(1)
+		for line in result.stdout.splitlines():
+			line = line.strip()
+			if line:
+				seen.add(line)
+
+	paths: list[Path] = []
+	for rel in sorted(seen):
+		p = ROOT / rel
+		if p.suffix in DEPLOY_SUFFIXES and p.is_file():
+			if "scripts" not in p.parts:
+				paths.append(p)
+	return paths
+
+
+def collect_html_files(changed_only: bool, since: str | None) -> list[Path]:
+	if changed_only or since:
+		files = git_changed_paths(since)
+		if not files:
+			print("Nenhum arquivo .html/.htaccess alterado para enviar.")
+		return files
+
+	files = []
+	for html in ROOT.rglob("*.html"):
+		if "scripts" not in html.parts:
+			files.append(html)
+	return sorted(files)
+
+
+def upload_files(files: list[Path], cfg: dict[str, str]) -> None:
 	remote_base = cfg.get("FTP_REMOTE_DIR", "/public_html/").rstrip("/")
 
 	ftp = ftplib.FTP()
@@ -45,19 +92,42 @@ def main() -> None:
 	ftp.login(cfg["FTP_USER"], cfg["FTP_PASS"])
 	ftp.set_pasv(True)
 
-	count = 0
-	for html in ROOT.rglob("*.html"):
-		if "scripts" in html.parts:
-			continue
-		rel = html.relative_to(ROOT).as_posix()
+	for local in files:
+		rel = local.relative_to(ROOT).as_posix()
 		remote = f"{remote_base}/{rel}"
 		ensure_remote_dir(ftp, str(Path(remote).parent))
-		with html.open("rb") as handle:
+		with local.open("rb") as handle:
 			ftp.storbinary(f"STOR {remote}", handle)
-		count += 1
 		print(f"  {rel}")
+
 	ftp.quit()
-	print(f"Concluído: {count} HTML enviados.")
+	print(f"Concluído: {len(files)} arquivo(s) enviado(s).")
+
+
+def main() -> None:
+	parser = argparse.ArgumentParser(description="Deploy HTML/.htaccess via FTP")
+	parser.add_argument(
+		"--changed",
+		action="store_true",
+		help="Envia só arquivos modificados no git (working tree + staged)",
+	)
+	parser.add_argument(
+		"--since",
+		metavar="REF",
+		help="Envia arquivos alterados desde um commit/ref (ex: HEAD~1)",
+	)
+	args = parser.parse_args()
+
+	env_path = ROOT / ".env"
+	if not env_path.is_file():
+		print("Arquivo .env não encontrado.", file=sys.stderr)
+		sys.exit(1)
+
+	files = collect_html_files(args.changed, args.since)
+	if not files:
+		return
+
+	upload_files(files, load_env(env_path))
 
 
 if __name__ == "__main__":

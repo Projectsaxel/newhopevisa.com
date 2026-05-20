@@ -13,6 +13,14 @@ POSTAL = "32812"
 COUNTRY = "US"
 LOGO_PATH = "/wp-content/uploads/2025/11/new-hope-logo.webp"
 
+LANDING_SEO = {
+	"title": "New Hope Immigration Services | Orlando, FL | USA",
+	"description": (
+		"Nonprofit immigration document preparation in Orlando, FL. "
+		"Choose your language: Portuguese, English, or Spanish. Call +1 407 275-6163."
+	),
+}
+
 HOME_SEO = {
 	"pt-br": {
 		"title": "Serviços de Imigração nos EUA | Ajuda com Visto | New Hope",

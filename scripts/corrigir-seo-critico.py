@@ -17,6 +17,7 @@ from i18n.schema_config import (  # noqa: E402
 	EMAIL,
 	FOOTER_ADDRESS,
 	HOME_SEO,
+	LANDING_SEO,
 	ORG_NAME,
 	PHONE,
 	POSTAL,
@@ -115,6 +116,14 @@ def is_home_index(path: Path) -> bool:
 	return len(rel.parts) == 2 and rel.parts[1] == "index.html" and rel.parts[0] in HOME_SEO
 
 
+def is_landing_index(path: Path) -> bool:
+	return path.relative_to(ROOT) == Path("index.html")
+
+
+def is_schema_primary_page(path: Path) -> bool:
+	return is_landing_index(path) or is_home_index(path)
+
+
 def site_base_url(path: Path) -> str:
 	rel = path.relative_to(ROOT)
 	if rel == Path("index.html"):
@@ -138,17 +147,17 @@ def build_schema(path: Path, lang: str) -> dict:
 	page_url = page_canonical_url(path)
 
 	page_key = page_key_for_file(path)
-	is_home = page_key == "home"
+	is_primary = page_key in ("home", "landing")
 
 	org_id = f"{DOMAIN}/#organization"
-	local_id = f"{page_url}#localbusiness" if is_home else f"{DOMAIN}/#localbusiness"
+	local_id = f"{page_url}#localbusiness" if is_primary else f"{DOMAIN}/#localbusiness"
 	website_id = f"{page_url}#website"
 
 	local_business: dict = {
 		"@type": ["LocalBusiness", "ProfessionalService"],
 		"@id": local_id,
 		"name": ORG_NAME,
-		"url": page_url if is_home else DOMAIN + "/",
+		"url": page_url if is_primary else DOMAIN + "/",
 		"image": f"{DOMAIN}{LOGO_PATH}",
 		"telephone": PHONE,
 		"email": EMAIL,
@@ -211,8 +220,8 @@ def build_schema(path: Path, lang: str) -> dict:
 		},
 	]
 
-	if is_home:
-		seo = HOME_SEO[lang]
+	if is_primary:
+		seo = LANDING_SEO if page_key == "landing" else HOME_SEO[lang]
 		graph.insert(
 			0,
 			{
@@ -246,7 +255,7 @@ def build_schema(path: Path, lang: str) -> dict:
 
 
 def remove_rankmath_article_on_home(path: Path) -> bool:
-	if not is_home_index(path):
+	if not is_schema_primary_page(path):
 		return False
 	text = path.read_text(encoding="utf-8")
 	if '"@type":"Article"' not in text and '"@type": "Article"' not in text:
@@ -281,7 +290,12 @@ def inject_schema(path: Path) -> bool:
 
 
 def update_home_seo(path: Path, lang: str) -> bool:
-	seo = HOME_SEO[lang]
+	if is_landing_index(path):
+		seo = LANDING_SEO
+	elif path.parent.name in HOME_SEO:
+		seo = HOME_SEO[lang]
+	else:
+		return False
 	text = path.read_text(encoding="utf-8")
 	new = text
 	new = re.sub(r"<title>.*?</title>", f"<title>{seo['title']}</title>", new, count=1)
@@ -346,7 +360,7 @@ def main() -> None:
 	print("  .htaccess atualizado")
 
 	schema_n = home_n = addr_n = rankmath_n = 0
-	targets = []
+	targets = [ROOT / "index.html"]
 	for lang in ("pt-br", "en", "es"):
 		targets.append(ROOT / lang / "index.html")
 		for p in (ROOT / lang).rglob("index.html"):
@@ -361,7 +375,9 @@ def main() -> None:
 			rankmath_n += 1
 		if inject_schema(path):
 			schema_n += 1
-		if path.name == "index.html" and path.parent.name in HOME_SEO:
+		if path.name == "index.html" and (
+			is_landing_index(path) or path.parent.name in HOME_SEO
+		):
 			if update_home_seo(path, lang):
 				home_n += 1
 		if inject_footer_address(path, lang):

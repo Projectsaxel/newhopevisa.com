@@ -17,6 +17,8 @@ python3 servir.py
 
 Abrir: http://localhost:8000/pt-br/
 
+O `servir.py` resolve `arquivo.css?ver=X` → `arquivo﹖ver=X.css` (nomes do espelho HTTrack). Em produção, o `.htaccess` faz o mesmo no Apache.
+
 ## Deploy FTP (Hostinger)
 
 Configure `.env` a partir de `.env.example` e execute:

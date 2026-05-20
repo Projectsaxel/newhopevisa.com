@@ -1,0 +1,9 @@
+# Espelho HTTrack: CSS/JS no disco usam ﹖ver= no nome (U+FE56), não ?ver= na URL.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{QUERY_STRING} ^ver=([^&]+)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.(css|js|woff2?|ttf|eot)$ $1﹖ver=%1.$2? [L]
+</IfModule>

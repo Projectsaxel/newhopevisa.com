@@ -10,6 +10,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def ensure_remote_dir(ftp: ftplib.FTP, remote_dir: str) -> None:
+	parts = [p for p in remote_dir.strip("/").split("/") if p]
+	path = ""
+	for part in parts:
+		path += f"/{part}"
+		try:
+			ftp.mkd(path)
+		except ftplib.error_perm:
+			pass
+
+
 def load_env(path: Path) -> dict[str, str]:
 	data: dict[str, str] = {}
 	for line in path.read_text(encoding="utf-8").splitlines():
@@ -40,6 +51,7 @@ def main() -> None:
 			continue
 		rel = html.relative_to(ROOT).as_posix()
 		remote = f"{remote_base}/{rel}"
+		ensure_remote_dir(ftp, str(Path(remote).parent))
 		with html.open("rb") as handle:
 			ftp.storbinary(f"STOR {remote}", handle)
 		count += 1

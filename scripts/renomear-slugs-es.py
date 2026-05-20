@@ -84,13 +84,12 @@ def rename_directories() -> int:
 	return moved
 
 
-def replace_in_text(text: str) -> str:
+def replace_in_text(text: str, *, es_only: bool = False) -> str:
 	for old, new in RENAME_ORDER:
-		# caminhos absolutos no site
 		text = text.replace(f"es/{old}/", f"es/{new}/")
-		# hreflang e links entre idiomas
 		text = text.replace(f"/es/{old}/", f"/es/{new}/")
-		# dentro de /es/ (relativos)
+		if es_only:
+			continue
 		text = text.replace(f"../{old}/", f"../{new}/")
 		text = text.replace(f'href="{old}/"', f'href="{new}/"')
 		text = text.replace(f"href='{old}/'", f"href='{new}/'")
@@ -106,8 +105,10 @@ def update_files() -> int:
 			continue
 		if path.name == "renomear-slugs-es.py":
 			continue
+		rel = path.relative_to(ROOT)
+		in_es_tree = bool(rel.parts) and rel.parts[0] == "es"
 		text = path.read_text(encoding="utf-8", errors="ignore")
-		new_text = replace_in_text(text)
+		new_text = replace_in_text(text, es_only=not in_es_tree)
 		if new_text != text:
 			path.write_text(new_text, encoding="utf-8")
 			changed += 1

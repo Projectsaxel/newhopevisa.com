@@ -23,3 +23,10 @@ RewriteRule ^es/temporary-protected-status-tps/?$ /es/estatus-de-proteccion-temp
 RewriteRule ^es/travel-documents/?$ /es/documentos-de-viaje/ [R=301,L]
 RewriteRule ^es/work-permit/?$ /es/permiso-de-trabajo/ [R=301,L]
 </IfModule>
+# Redirecionamentos 301 — slugs EN incorretos (espanhol)
+<IfModule mod_rewrite.c>
+RewriteRule ^en/servicios/?$ /en/services/ [R=301,L]
+RewriteRule ^en/quienes-somos/?$ /en/about-us/ [R=301,L]
+RewriteRule ^en/contacto/?$ /en/contact-us/ [R=301,L]
+RewriteRule ^en/tarifas-de-servicios/?$ /en/fee-schedule/ [R=301,L]
+</IfModule>

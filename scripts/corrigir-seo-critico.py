@@ -30,7 +30,11 @@ from i18n.schema_config import (  # noqa: E402
 
 SCHEMA_MARKER = "<!-- site-schema-local -->"
 SCHEMA_MARKER_RE = re.compile(
-	r"\n<!-- site-schema-local -->.*?</script>\s*(?=</head>)",
+	r"<!-- site-schema-local -->.*?</script>\s*(?=</head>)",
+	re.DOTALL,
+)
+RANKMATH_SCHEMA_RE = re.compile(
+	r'<script type="application/ld\+json" class="rank-math-schema-pro">.*?</script>\n',
 	re.DOTALL,
 )
 
@@ -106,17 +110,83 @@ def depth_prefix(path: Path) -> str:
 	return "../" * depth
 
 
+def is_home_index(path: Path) -> bool:
+	rel = path.relative_to(ROOT)
+	return len(rel.parts) == 2 and rel.parts[1] == "index.html" and rel.parts[0] in HOME_SEO
+
+
+def site_base_url(path: Path) -> str:
+	rel = path.relative_to(ROOT)
+	if rel == Path("index.html"):
+		return f"{DOMAIN}/"
+	if rel.parts and rel.parts[0] in HOME_SEO:
+		return f"{DOMAIN}/{rel.parts[0]}/"
+	return f"{DOMAIN}/"
+
+
+def page_canonical_url(path: Path) -> str:
+	rel = path.relative_to(ROOT)
+	if rel == Path("index.html"):
+		return f"{DOMAIN}/"
+	if len(rel.parts) >= 2 and rel.parts[-1] == "index.html":
+		return f"{DOMAIN}/{'/'.join(rel.parts[:-1])}/"
+	return site_base_url(path)
+
+
 def build_schema(path: Path, lang: str) -> dict:
-	prefix = depth_prefix(path)
-	base_url = DOMAIN + "/" if prefix == "" else DOMAIN + "/" + path.relative_to(ROOT).parts[0] + "/"
-	if len(path.relative_to(ROOT).parts) > 2:
-		slug_parts = path.relative_to(ROOT).parts[1:-1]
-		page_url = DOMAIN + "/" + "/".join(path.relative_to(ROOT).parts[:-1]) + "/"
-	else:
-		page_url = base_url
+	base_url = site_base_url(path)
+	page_url = page_canonical_url(path)
+
+	page_key = page_key_for_file(path)
+	is_home = page_key == "home"
 
 	org_id = f"{DOMAIN}/#organization"
-	local_id = f"{DOMAIN}/#localbusiness"
+	local_id = f"{page_url}#localbusiness" if is_home else f"{DOMAIN}/#localbusiness"
+	website_id = f"{page_url}#website"
+
+	local_business: dict = {
+		"@type": ["LocalBusiness", "ProfessionalService"],
+		"@id": local_id,
+		"name": ORG_NAME,
+		"url": page_url if is_home else DOMAIN + "/",
+		"image": f"{DOMAIN}{LOGO_PATH}",
+		"telephone": PHONE,
+		"email": EMAIL,
+		"priceRange": "$$",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": STREET,
+			"addressLocality": LOCALITY,
+			"addressRegion": REGION,
+			"postalCode": POSTAL,
+			"addressCountry": COUNTRY,
+		},
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": 28.5383,
+			"longitude": -81.3792,
+		},
+		"openingHoursSpecification": [
+			{
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+					"Monday",
+					"Tuesday",
+					"Wednesday",
+					"Thursday",
+					"Friday",
+				],
+				"opens": "09:30",
+				"closes": "15:00",
+			}
+		],
+		"areaServed": [
+			{"@type": "State", "name": "Florida"},
+			{"@type": "Country", "name": "United States"},
+		],
+		"parentOrganization": {"@id": org_id},
+	}
+
 	graph: list[dict] = [
 		{
 			"@type": "Organization",
@@ -130,51 +200,10 @@ def build_schema(path: Path, lang: str) -> dict:
 				"https://www.instagram.com/newhopeimmigrationservices",
 			],
 		},
-		{
-			"@type": ["LocalBusiness", "ProfessionalService"],
-			"@id": local_id,
-			"name": ORG_NAME,
-			"url": DOMAIN + "/",
-			"image": f"{DOMAIN}{LOGO_PATH}",
-			"telephone": PHONE,
-			"email": EMAIL,
-			"priceRange": "$$",
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": STREET,
-				"addressLocality": LOCALITY,
-				"addressRegion": REGION,
-				"postalCode": POSTAL,
-				"addressCountry": COUNTRY,
-			},
-			"geo": {
-				"@type": "GeoCoordinates",
-				"latitude": 28.5383,
-				"longitude": -81.3792,
-			},
-			"openingHoursSpecification": [
-				{
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": [
-						"Monday",
-						"Tuesday",
-						"Wednesday",
-						"Thursday",
-						"Friday",
-					],
-					"opens": "09:30",
-					"closes": "15:00",
-				}
-			],
-			"areaServed": [
-				{"@type": "State", "name": "Florida"},
-				{"@type": "Country", "name": "United States"},
-			],
-			"parentOrganization": {"@id": org_id},
-		},
+		local_business,
 		{
 			"@type": "WebSite",
-			"@id": f"{page_url}#website",
+			"@id": website_id,
 			"url": base_url,
 			"name": ORG_NAME,
 			"publisher": {"@id": org_id},
@@ -182,7 +211,23 @@ def build_schema(path: Path, lang: str) -> dict:
 		},
 	]
 
-	page_key = page_key_for_file(path)
+	if is_home:
+		seo = HOME_SEO[lang]
+		graph.insert(
+			0,
+			{
+				"@type": "WebPage",
+				"@id": f"{page_url}#webpage",
+				"url": page_url,
+				"name": seo["title"],
+				"description": seo["description"],
+				"isPartOf": {"@id": website_id},
+				"about": {"@id": local_id},
+				"mainEntity": {"@id": local_id},
+				"primaryEntityOfPage": {"@id": local_id},
+				"inLanguage": {"pt-br": "pt-BR", "en": "en", "es": "es"}[lang],
+			},
+		)
 	if page_key and page_key in SERVICE_SCHEMA_NAMES:
 		svc_name = SERVICE_SCHEMA_NAMES[page_key][lang]
 		graph.append(
@@ -200,6 +245,20 @@ def build_schema(path: Path, lang: str) -> dict:
 	return {"@context": "https://schema.org", "@graph": graph}
 
 
+def remove_rankmath_article_on_home(path: Path) -> bool:
+	if not is_home_index(path):
+		return False
+	text = path.read_text(encoding="utf-8")
+	if '"@type":"Article"' not in text and '"@type": "Article"' not in text:
+		if 'class="rank-math-schema-pro"' not in text:
+			return False
+	new_text = RANKMATH_SCHEMA_RE.sub("", text, count=1)
+	if new_text == text:
+		return False
+	path.write_text(new_text, encoding="utf-8")
+	return True
+
+
 def inject_schema(path: Path) -> bool:
 	lang = lang_for_path(path)
 	if not lang:
@@ -214,7 +273,7 @@ def inject_schema(path: Path) -> bool:
 	if SCHEMA_MARKER in text:
 		new_text = SCHEMA_MARKER_RE.sub(block.strip() + "\n", text, count=1)
 	else:
-		new_text = text.replace("</head>", f"\n{block}</head>", 1)
+		new_text = text.replace("</head>", f"\n{block.rstrip()}\n</head>", 1)
 	if new_text != text:
 		path.write_text(new_text, encoding="utf-8")
 		return True
@@ -286,7 +345,7 @@ def main() -> None:
 	append_htaccess_en_redirects()
 	print("  .htaccess atualizado")
 
-	schema_n = home_n = addr_n = 0
+	schema_n = home_n = addr_n = rankmath_n = 0
 	targets = []
 	for lang in ("pt-br", "en", "es"):
 		targets.append(ROOT / lang / "index.html")
@@ -298,6 +357,8 @@ def main() -> None:
 		lang = lang_for_path(path)
 		if not lang:
 			continue
+		if remove_rankmath_article_on_home(path):
+			rankmath_n += 1
 		if inject_schema(path):
 			schema_n += 1
 		if path.name == "index.html" and path.parent.name in HOME_SEO:
@@ -306,6 +367,7 @@ def main() -> None:
 		if inject_footer_address(path, lang):
 			addr_n += 1
 
+	print(f"Rank Math Article removido (home): {rankmath_n} páginas")
 	print(f"Schema injetado: {schema_n} páginas")
 	print(f"Home SEO: {home_n} páginas")
 	print(f"Endereço no rodapé: {addr_n} páginas")

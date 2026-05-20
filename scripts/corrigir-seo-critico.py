@@ -233,7 +233,6 @@ def build_schema(path: Path, lang: str) -> dict:
 				"isPartOf": {"@id": website_id},
 				"about": {"@id": local_id},
 				"mainEntity": {"@id": local_id},
-				"primaryEntityOfPage": {"@id": local_id},
 				"inLanguage": {"pt-br": "pt-BR", "en": "en", "es": "es"}[lang],
 			},
 		)

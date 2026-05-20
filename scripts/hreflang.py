@@ -49,6 +49,7 @@ PAGES: dict[str, dict[str, str]] = {
 	"privacidade": {
 		"pt-br": "pt-br/politica-de-privacidade/",
 		"en": "en/privacy-policy/",
+		"es": "es/privacy-policy/",
 	},
 	"visto-trabalho": {
 		"pt-br": "pt-br/visto-de-trabalho/",

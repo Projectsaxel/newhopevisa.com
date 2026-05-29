@@ -15,10 +15,10 @@ ASSET_EXTS = {".css", ".js", ".woff", ".woff2", ".ttf", ".eot"}
 
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
 ROOT = os.path.dirname(os.path.abspath(__file__))
-HEAD_INJECT = (
-	b'<link rel="stylesheet" href="/local-fix.css" id="local-dev-fix" />\n'
-	b'<script src="/local-redirect.js" id="local-url-clean"></script>\n</head>'
-)
+
+
+class ReusableTCPServer(socketserver.TCPServer):
+	allow_reuse_address = True
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
@@ -31,8 +31,20 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 		self.end_headers()
 
 	def _inject_head(self, body: bytes) -> bytes:
-		if b"</head>" in body and b'id="local-url-clean"' not in body:
-			return body.replace(b"</head>", HEAD_INJECT, 1)
+		if b"</head>" not in body:
+			return body
+		if b'id="local-dev-fix"' not in body:
+			body = body.replace(
+				b"</head>",
+				b'<link rel="stylesheet" href="/local-fix.css" id="local-dev-fix" />\n</head>',
+				1,
+			)
+		if b'id="local-url-clean"' not in body:
+			body = body.replace(
+				b"</head>",
+				b'<script src="/local-redirect.js" id="local-url-clean"></script>\n</head>',
+				1,
+			)
 		return body
 
 	def _find_mirror_asset(self, clean_path: str, query: str) -> str | None:
@@ -142,7 +154,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 def main() -> None:
 	os.chdir(ROOT)
-	with socketserver.TCPServer(("", PORT), Handler) as httpd:
+	with ReusableTCPServer(("", PORT), Handler) as httpd:
 		print(f"Servidor: http://localhost:{PORT}/")
 		print(f"  Português: http://localhost:{PORT}/pt-br/")
 		print("Use servir.py (não python -m http.server) para URLs sem .html\n")

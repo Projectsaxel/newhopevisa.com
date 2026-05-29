@@ -127,6 +127,211 @@ gtag("config", "GT-TXBWBBTT");
 <link rel="alternate" hreflang="es" href="./" />
 <link rel="alternate" hreflang="x-default" href="/" /><!-- site-schema-local -->
 <script type="application/ld+json" class="site-schema-local">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://newhopevisa.com/#organization", "name": "New Hope Immigration Services", "url": "https://newhopevisa.com/", "logo": "https://newhopevisa.com/wp-content/uploads/2025/11/new-hope-logo.webp", "email": "email@newhopevisa.com", "telephone": "+1-407-275-6163", "sameAs": ["https://www.instagram.com/newhopeimmigrationservices"]}, {"@type": ["LocalBusiness", "ProfessionalService"], "@id": "https://newhopevisa.com/#localbusiness", "name": "New Hope Immigration Services", "url": "https://newhopevisa.com/", "image": "https://newhopevisa.com/wp-content/uploads/2025/11/new-hope-logo.webp", "telephone": "+1-407-275-6163", "email": "email@newhopevisa.com", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "4300 Lake Margaret Dr", "addressLocality": "Orlando", "addressRegion": "FL", "postalCode": "32812", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 28.5383, "longitude": -81.3792}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:30", "closes": "15:00"}], "areaServed": [{"@type": "State", "name": "Florida"}, {"@type": "Country", "name": "United States"}], "parentOrganization": {"@id": "https://newhopevisa.com/#organization"}}, {"@type": "WebSite", "@id": "https://newhopevisa.com/es/permiso-de-trabajo/#website", "url": "https://newhopevisa.com/es/", "name": "New Hope Immigration Services", "publisher": {"@id": "https://newhopevisa.com/#organization"}, "inLanguage": "es"}, {"@type": "Service", "@id": "https://newhopevisa.com/es/permiso-de-trabajo/#service", "name": "Permiso de trabajo y autorización de empleo (EAD)", "serviceType": "Permiso de trabajo y autorización de empleo (EAD)", "provider": {"@id": "https://newhopevisa.com/#localbusiness"}, "areaServed": {"@type": "State", "name": "Florida"}, "url": "https://newhopevisa.com/es/permiso-de-trabajo/"}]}</script>
+
+<!-- site-uscis-popup-es-style -->
+<style id="es-uscis-popup-css">
+.nhv-popup-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	background: rgba(15, 23, 42, 0.72);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.nhv-popup-overlay.is-open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.nhv-popup {
+	position: relative;
+	width: min(640px, 100%);
+	max-height: min(88vh, 820px);
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+	font-family: Manrope, system-ui, -apple-system, sans-serif;
+	color: #1e293b;
+	overflow: hidden;
+}
+
+.nhv-popup__header {
+	flex-shrink: 0;
+	padding: 1.25rem 3rem 1rem 1.5rem;
+	border-bottom: 1px solid #e2e8f0;
+	background: #469A3D;
+	color: #fff;
+}
+
+.nhv-popup__title {
+	margin: 0;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.nhv-popup__subtitle {
+	margin: 0.35rem 0 0;
+	font-size: 0.875rem;
+	opacity: 0.92;
+}
+
+.nhv-popup-overlay button.nhv-popup__close,
+.nhv-popup .nhv-popup__close {
+	position: absolute;
+	top: 0.85rem;
+	right: 0.85rem;
+	width: 2.25rem;
+	height: 2.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border: 0 !important;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.18) !important;
+	color: #fff !important;
+	-webkit-text-fill-color: #fff;
+	font-size: 1.35rem;
+	font-weight: 400;
+	line-height: 1;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	box-shadow: none;
+	transition: background 0.15s ease;
+}
+
+.nhv-popup-overlay button.nhv-popup__close:hover,
+.nhv-popup-overlay button.nhv-popup__close:focus,
+.nhv-popup-overlay button.nhv-popup__close:focus-visible,
+.nhv-popup .nhv-popup__close:hover,
+.nhv-popup .nhv-popup__close:focus-visible {
+	background: rgba(255, 255, 255, 0.32) !important;
+	color: #fff !important;
+	-webkit-text-fill-color: #fff;
+	border: 0 !important;
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+.nhv-popup__body {
+	flex: 1;
+	overflow-y: auto;
+	padding: 1.25rem 1.5rem;
+	font-size: 0.9375rem;
+	line-height: 1.65;
+}
+
+.nhv-popup__body p {
+	margin: 0 0 1rem;
+}
+
+.nhv-popup__body p:last-child {
+	margin-bottom: 0;
+}
+
+.nhv-popup__body ul {
+	margin: 0 0 1rem;
+	padding-left: 1.25rem;
+}
+
+.nhv-popup__body li {
+	margin-bottom: 0.35rem;
+}
+
+.nhv-popup__greeting {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.nhv-popup__signature {
+	margin-top: 1.25rem !important;
+	font-weight: 600;
+}
+
+.nhv-popup__footer {
+	flex-shrink: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.5rem 1.25rem;
+	border-top: 1px solid #e2e8f0;
+	background: #f8fafc;
+}
+
+.nhv-popup__dismiss-label {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.8125rem;
+	color: #64748b;
+	cursor: pointer;
+	user-select: none;
+}
+
+.nhv-popup__dismiss-label input {
+	width: 1rem;
+	height: 1rem;
+	accent-color: #469A3D;
+}
+
+.nhv-popup__btn {
+	border: 0;
+	border-radius: 8px;
+	padding: 0.65rem 1.25rem;
+	background: #469A3D;
+	color: #fff;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.15s ease;
+}
+
+.nhv-popup__btn:hover,
+.nhv-popup__btn:focus-visible {
+	background: #3d8535;
+	outline: 2px solid #469A3D;
+	outline-offset: 2px;
+}
+
+body.nhv-popup-open {
+	overflow: hidden;
+}
+
+/* Elementor: conteúdo visível quando JS de animação não roda */
+.elementor-invisible {
+	visibility: visible !important;
+	opacity: 1 !important;
+	animation: none !important;
+}
+
+@media (max-width: 480px) {
+	.nhv-popup__header {
+		padding-right: 3rem;
+	}
+
+	.nhv-popup__footer {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.nhv-popup__btn {
+		width: 100%;
+	}
+}
+</style>
 </head>
 <body class="wp-singular page-template-default page page-id-501 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-11 elementor-page elementor-page-501">
 
@@ -426,6 +631,113 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=../wp-includes/js/wp-emoji-loader.min.js
 </script>
 
+
+<!-- site-uscis-popup-es -->
+<script id="es-uscis-popup-js">
+(function () {
+	"use strict";
+
+	var STORAGE_KEY = "newhope-uscis-memo-2026-05-es-v1";
+
+	if (localStorage.getItem(STORAGE_KEY) === "1") {
+		return;
+	}
+
+	var overlay = document.createElement("div");
+	overlay.className = "nhv-popup-overlay";
+	overlay.id = "nhv-uscis-popup";
+	overlay.setAttribute("role", "dialog");
+	overlay.setAttribute("aria-modal", "true");
+	overlay.setAttribute("aria-labelledby", "nhv-uscis-popup-title");
+	overlay.innerHTML =
+		'<div class="nhv-popup">' +
+		'<button type="button" class="nhv-popup__close" aria-label="Cerrar aviso">&times;</button>' +
+		'<div class="nhv-popup__header">' +
+		'<h2 class="nhv-popup__title" id="nhv-uscis-popup-title">Memorando USCIS — Ajuste de Estatus</h2>' +
+		'<p class="nhv-popup__subtitle">Publicado el 22 de mayo de 2026</p>' +
+		"</div>" +
+		'<div class="nhv-popup__body">' +
+		'<p class="nhv-popup__greeting">Buenas tardes,</p>' +
+		"<p>Nos gustar\u00eda compartir algunas aclaraciones importantes sobre el memorando publicado por USCIS el 22 de mayo de 2026, referente a los casos de Ajuste de Estatus.</p>" +
+		"<p>El memorando refuerza que, de acuerdo con la Secci\u00f3n 245 del INA (Immigration and Nationality Act), el Ajuste de Estatus se considera un beneficio discrecional y extraordinario. Esto significa que, incluso cuando el extranjero cumple con los requisitos b\u00e1sicos de elegibilidad, la aprobaci\u00f3n del caso no es autom\u00e1tica. La decisi\u00f3n final depende del an\u00e1lisis y la discreci\u00f3n del oficial de inmigraci\u00f3n responsable del caso.</p>" +
+		"<p>Seg\u00fan USCIS, siempre ha existido el entendimiento de que no todos los solicitantes elegibles tendr\u00e1n necesariamente aprobado su Ajuste de Estatus. El oficial puede evaluar las evidencias presentadas, el historial migratorio del solicitante y otros factores relevantes para determinar si la concesi\u00f3n del beneficio es apropiada y est\u00e1 en el mejor inter\u00e9s de los Estados Unidos.</p>" +
+		"<p>El memorando tambi\u00e9n destaca que el Ajuste de Estatus no fue creado para reemplazar el proceso consular regular, sino para aplicarse \u00fanicamente a situaciones espec\u00edficas previstas por la ley.</p>" +
+		"<p>Como resultado, despu\u00e9s de la entrevista y la revisi\u00f3n del caso, el solicitante puede recibir la aprobaci\u00f3n del Ajuste de Estatus o ser dirigido a continuar mediante procesamiento consular. Esto no significa necesariamente que la persona perder\u00e1 la oportunidad de obtener un estatus legal; sin embargo, el proceso puede volverse m\u00e1s largo y puede implicar costos adicionales.</p>" +
+		"<p>En el proceso de revisi\u00f3n discrecional, USCIS instruye a los oficiales a considerar la totalidad de las circunstancias de cada caso, incluyendo factores positivos y negativos. Algunos de los factores que pueden ser revisados incluyen:</p>" +
+		"<ul>" +
+		"<li>violaciones migratorias o de estatus;</li>" +
+		"<li>empleo no autorizado;</li>" +
+		"<li>fraude o tergiversaci\u00f3n;</li>" +
+		"<li>historial migratorio;</li>" +
+		"<li>lazos familiares;</li>" +
+		"<li>car\u00e1cter moral;</li>" +
+		"<li>factores humanitarios y otras evidencias favorables.</li>" +
+		"</ul>" +
+		"<p>Aunque, en teor\u00eda, estas directrices siempre se han aplicado a los casos de Ajuste de Estatus, a\u00fan no sabemos exactamente c\u00f3mo este nuevo memorando afectar\u00e1 los casos que se encuentran actualmente pendientes. Sin embargo, entendemos que las revisiones de casos pueden volverse m\u00e1s detalladas y rigurosas en el futuro.</p>" +
+		"<p>Continuaremos monitoreando las orientaciones de USCIS y mantendremos informados a nuestros clientes sobre cualquier cambio relevante.</p>" +
+		'<p class="nhv-popup__signature">Atentamente,<br>New Hope Visa</p>' +
+		"</div>" +
+		'<div class="nhv-popup__footer">' +
+		'<label class="nhv-popup__dismiss-label">' +
+		'<input type="checkbox" id="nhv-uscis-popup-hide" />' +
+		"No volver a mostrar" +
+		"</label>" +
+		'<button type="button" class="nhv-popup__btn" id="nhv-uscis-popup-ok">Entendido</button>' +
+		"</div>" +
+		"</div>";
+
+	document.body.appendChild(overlay);
+
+	var closeBtn = overlay.querySelector(".nhv-popup__close");
+	var okBtn = overlay.querySelector("#nhv-uscis-popup-ok");
+	var hideCheckbox = overlay.querySelector("#nhv-uscis-popup-hide");
+	var lastFocus = null;
+
+	function openPopup() {
+		lastFocus = document.activeElement;
+		overlay.classList.add("is-open");
+		document.body.classList.add("nhv-popup-open");
+		closeBtn.focus();
+	}
+
+	function closePopup() {
+		if (hideCheckbox.checked) {
+			localStorage.setItem(STORAGE_KEY, "1");
+		}
+		overlay.classList.remove("is-open");
+		document.body.classList.remove("nhv-popup-open");
+		if (lastFocus && typeof lastFocus.focus === "function") {
+			lastFocus.focus();
+		}
+	}
+
+	closeBtn.addEventListener("click", closePopup);
+	okBtn.addEventListener("click", closePopup);
+
+	overlay.addEventListener("click", function (event) {
+		if (event.target === overlay) {
+			closePopup();
+		}
+	});
+
+	document.addEventListener("keydown", function (event) {
+		if (!overlay.classList.contains("is-open")) {
+			return;
+		}
+		if (event.key === "Escape") {
+			closePopup();
+		}
+	});
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", function () {
+			setTimeout(openPopup, 400);
+		});
+	} else {
+		setTimeout(openPopup, 400);
+	}
+})();
+</script>
 </body>
 </html>
 

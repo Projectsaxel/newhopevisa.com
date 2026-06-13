@@ -1,6 +1,6 @@
 /* New Hope Immigration — Exit Popup + Floating CTA + WhatsApp Button
    Loaded on all site pages via <script src="/exit-popup.js" defer></script>
-   v2.1 — Jun 2026 */
+   v2.2 — Jun 2026 */
 (function () {
   "use strict";
 
@@ -57,8 +57,8 @@
 
   /* ── Popup markup ── */
   var POPUP_CSS = [
-    "#nhv-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99997;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}",
-    "#nhv-overlay.visible{opacity:1}",
+    "#nhv-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99997;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}",
+    "#nhv-overlay.visible{opacity:1;pointer-events:auto}",
     "#nhv-modal{background:#fff;border-radius:16px;padding:36px 32px 28px;max-width:440px;width:90%;position:relative;transform:translateY(24px);transition:transform .3s;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.22)}",
     "#nhv-overlay.visible #nhv-modal{transform:translateY(0)}",
     "#nhv-modal-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#94a3b8;line-height:1}",

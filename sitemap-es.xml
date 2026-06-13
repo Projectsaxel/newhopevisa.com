@@ -1,183 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://newhopevisa.com/es/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/ajuste-de-estatus/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/ajuste-de-status/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/adjustment-of-status/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/ajuste-de-estatus/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/contacto/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/contato/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/contact-us/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/contacto/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/documentos-de-viaje/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/documentos-de-viagem/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/travel-documents/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/documentos-de-viaje/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/estatus-de-proteccion-temporal-tps/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/status-de-protecao-temporaria-tps/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/temporary-protected-status-tps/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/estatus-de-proteccion-temporal-tps/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/naturalizacion/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/naturalizacao/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/naturalization/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/naturalizacion/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/permiso-de-trabajo/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/visto-de-trabalho/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/work-permit/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/permiso-de-trabajo/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/peticion-familiar/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/peticao-familiar/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/family-petitions/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/peticion-familiar/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/politica-de-cookies/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/politica-de-cookies/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/cookie-policy/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/politica-de-cookies/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/politica-de-privacidad/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/politica-de-privacidade/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/privacy-policy/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/politica-de-privacidad/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/procesamiento-consular/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/processamento-consular/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/consular-processing/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/procesamiento-consular/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/"/>
   </url>
   <url>
     <loc>https://newhopevisa.com/es/quienes-somos/</loc>
-    <lastmod>2025-11-12</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/quem-somos/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/about-us/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/quienes-somos/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
-  </url>
-  <url>
-    <loc>https://newhopevisa.com/es/renovacion-de-residencia-i-90/</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/renovacao-de-residencia-i-90/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/residence-renewals-i-90/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/renovacion-de-residencia-i-90/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/quem-somos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/about-us/"/>
   </url>
   <url>
     <loc>https://newhopevisa.com/es/servicios/</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/servicos/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/services/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/servicios/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/servicos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/services/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/contacto/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/contact-us/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/contact-us/"/>
   </url>
   <url>
     <loc>https://newhopevisa.com/es/tarifas-de-servicios/</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/taxas-dos-servicos/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/fee-schedule/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/tarifas-de-servicios/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/fee-schedule/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/taxas-dos-servicos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/tarifas-de-servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/fee-schedule/"/>
   </url>
   <url>
-    <loc>https://newhopevisa.com/es/terminos-de-uso/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/termos-de-uso/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/terms-of-use/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/terminos-de-uso/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
+    <loc>https://newhopevisa.com/es/ajuste-de-estatus/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/adjustment-of-status/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/ajuste-de-status/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/ajuste-de-estatus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/adjustment-of-status/"/>
   </url>
   <url>
-    <loc>https://newhopevisa.com/es/vawa/</loc>
-    <lastmod>2025-11-12</lastmod>
+    <loc>https://newhopevisa.com/es/naturalizacion/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/vawa/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/vawa/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/vawa/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/naturalization/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/naturalizacao/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/naturalizacion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/naturalization/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/permiso-de-trabajo/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/work-permit/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/visto-de-trabalho/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/permiso-de-trabajo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/work-permit/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/peticion-familiar/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/family-petitions/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/peticao-familiar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/peticion-familiar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/family-petitions/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/renovacion-de-residencia-i-90/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/residence-renewals-i-90/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/renovacao-de-residencia-i-90/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/renovacion-de-residencia-i-90/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/residence-renewals-i-90/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/documentos-de-viaje/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/travel-documents/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/documentos-de-viagem/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/documentos-de-viaje/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/travel-documents/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/estatus-de-proteccion-temporal-tps/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/temporary-protected-status-tps/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/status-de-protecao-temporaria-tps/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/estatus-de-proteccion-temporal-tps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/temporary-protected-status-tps/"/>
   </url>
   <url>
     <loc>https://newhopevisa.com/es/waivers/</loc>
-    <lastmod>2025-11-12</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <html:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/waivers/"/>
-    <html:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/waivers/"/>
-    <html:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/waivers/"/>
-    <html:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/"/>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/waivers/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/waivers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/waivers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/waivers/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/vawa/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/vawa/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/vawa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/vawa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/vawa/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/procesamiento-consular/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/consular-processing/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/processamento-consular/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/procesamiento-consular/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/consular-processing/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/politica-de-privacidad/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/politica-de-privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/politica-de-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/politica-de-cookies/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/politica-de-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/politica-de-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/cookie-policy/"/>
+  </url>
+  <url>
+    <loc>https://newhopevisa.com/es/terminos-de-uso/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://newhopevisa.com/en/terms-of-use/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://newhopevisa.com/pt-br/termos-de-uso/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://newhopevisa.com/es/terminos-de-uso/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://newhopevisa.com/en/terms-of-use/"/>
   </url>
 </urlset>

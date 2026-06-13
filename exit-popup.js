@@ -72,8 +72,8 @@
 
   /* ── Float panel CSS ── */
   var FLOAT_CSS = [
-    "#nhv-float-btn{position:fixed;bottom:24px;right:24px;z-index:99998;width:56px;height:56px;border-radius:50%;background:#469A3D;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(70,154,61,.45);display:flex;align-items:center;justify-content:center;transition:transform .15s,box-shadow .15s}",
-    "#nhv-float-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(70,154,61,.6)}",
+    "#nhv-float-btn{position:fixed;bottom:24px;right:0;z-index:99998;background:#469A3D;border:none;cursor:pointer;box-shadow:-2px 4px 20px rgba(70,154,61,.45);display:flex;align-items:center;gap:8px;padding:12px 18px 12px 16px;border-radius:28px 0 0 28px;transition:transform .15s,box-shadow .15s;color:#fff;font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;letter-spacing:.3px;white-space:nowrap}",
+    "#nhv-float-btn:hover{transform:translateX(-4px);box-shadow:-4px 6px 28px rgba(70,154,61,.6)}",
     "#nhv-float-panel{position:fixed;bottom:90px;right:24px;z-index:99998;width:300px;background:#fff;border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,.18);padding:24px 22px 20px;display:none;font-family:'Manrope',sans-serif}",
     "#nhv-float-panel.open{display:block}",
     "#nhv-float-panel h4{font-size:16px;font-weight:800;color:#0f172a;margin:0 0 8px}",
@@ -85,7 +85,7 @@
 
   /* ── WhatsApp button CSS ── */
   var WA_CSS = [
-    "#nhv-wa-btn{position:fixed;bottom:90px;right:24px;z-index:9998;width:52px;height:52px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,.5);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s}",
+    "#nhv-wa-btn{position:fixed;bottom:100px;right:24px;z-index:100000;width:52px;height:52px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,.5);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s;pointer-events:auto}",
     "#nhv-wa-btn:hover{transform:scale(1.1)}"
   ].join("");
 
@@ -111,7 +111,8 @@
   var floatBtn = document.createElement("button");
   floatBtn.id = "nhv-float-btn";
   floatBtn.setAttribute("aria-label", s.float_label);
-  floatBtn.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>';
+  floatBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'
+    + '<span>' + (lg === 'pt' ? 'Agendar $50' : lg === 'es' ? 'Agendar $50' : 'Schedule $50') + '</span>';
 
   var contactHref = lg === "pt" ? "/pt-br/contato/" : lg === "es" ? "/es/contacto/" : "/en/contact-us/";
   var floatPanel = document.createElement("div");

@@ -30,3 +30,10 @@ RewriteRule ^en/quienes-somos/?$ /en/about-us/ [R=301,L]
 RewriteRule ^en/contacto/?$ /en/contact-us/ [R=301,L]
 RewriteRule ^en/tarifas-de-servicios/?$ /en/fee-schedule/ [R=301,L]
 </IfModule>
+
+# Cache-Control: JS/CSS com versão curta para facilitar atualizações
+<IfModule mod_headers.c>
+  <FilesMatch "\.js$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>

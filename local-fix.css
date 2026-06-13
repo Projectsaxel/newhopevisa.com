@@ -4,3 +4,31 @@
 	opacity: 1 !important;
 	animation: none !important;
 }
+
+/* ── MOBILE HEADER FIX v4 ── */
+/* No mobile: mostrar apenas o globo (logo image), esconder texto + nav */
+@media (max-width: 767px) {
+  /* Esconde "New Hope Immigration" heading no header */
+  .elementor-location-header .elementor-widget-heading {
+    display: none !important;
+  }
+  /* Esconde container de nav + botões (Reserve, Call Us) */
+  .elementor-element-38ab9d40 {
+    display: none !important;
+  }
+  /* Centraliza o logo */
+  .elementor-element-1cb9c4b4 {
+    justify-content: flex-start !important;
+    padding: 6px 12px !important;
+  }
+  /* Tamanho adequado do globo */
+  .elementor-location-header .elementor-widget-image img {
+    max-width: 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+  /* Blog nav: esconde texto "New Hope Immigration" span */
+  .nhv-blog-nav span {
+    display: none !important;
+  }
+}

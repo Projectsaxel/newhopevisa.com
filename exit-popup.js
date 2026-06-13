@@ -103,7 +103,7 @@
     + '<button id="nhv-modal-close" aria-label="Close">×</button>'
     + '<h2>' + s.popup_title + '</h2>'
     + '<p>' + s.popup_body + '</p>'
-    + '<a id="nhv-modal-cta" href="/en/contact-us/?src=exit-popup&ref=' + src() + '">' + s.popup_cta + '</a>'
+    + '<a id="nhv-modal-cta" href="#" target="_blank" rel="noopener">' + s.popup_cta + '</a>'
     + '<button id="nhv-modal-skip">' + s.popup_close + '</button>'
     + '</div>';
 
@@ -156,7 +156,12 @@
     window.nhvOpenPopup = function (source) {
       overlay.classList.add("visible");
       var cta = document.getElementById("nhv-modal-cta");
-      if (cta) cta.href = contactHref + "?src=" + (source || "manual");
+      var waConsult = {
+        en: "Hi! I'd like to schedule a $50 consultation with New Hope Immigration Services.",
+        pt: "Olá! Gostaria de agendar uma consulta de $50 com a New Hope Immigration Services.",
+        es: "¡Hola! Me gustaría agendar una consulta de $50 con New Hope Immigration Services."
+      };
+      if (cta) cta.href = "https://wa.me/14072756163?text=" + encodeURIComponent(waConsult[lg]);
     };
 
     function closePopup() { overlay.classList.remove("visible"); }
